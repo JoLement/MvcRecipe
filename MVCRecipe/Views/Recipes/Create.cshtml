@@ -1,0 +1,98 @@
+﻿@model MVCRecipe.Models.Recipe
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Recipe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumMeal" class="control-label"></label>
+                <input asp-for="NumMeal" class="form-control" />
+                <span asp-validation-for="NumMeal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartSeason" class="control-label"></label>
+                <input asp-for="StartSeason" class="form-control" />
+                <span asp-validation-for="StartSeason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndSeason" class="control-label"></label>
+                <input asp-for="EndSeason" class="form-control" />
+                <span asp-validation-for="EndSeason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient0" class="control-label"></label>
+                <input asp-for="Ingredient0" class="form-control" />
+                <span asp-validation-for="Ingredient0" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient1" class="control-label"></label>
+                <input asp-for="Ingredient1" class="form-control" />
+                <span asp-validation-for="Ingredient1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient2" class="control-label"></label>
+                <input asp-for="Ingredient2" class="form-control" />
+                <span asp-validation-for="Ingredient2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient3" class="control-label"></label>
+                <input asp-for="Ingredient3" class="form-control" />
+                <span asp-validation-for="Ingredient3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient4" class="control-label"></label>
+                <input asp-for="Ingredient4" class="form-control" />
+                <span asp-validation-for="Ingredient4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient5" class="control-label"></label>
+                <input asp-for="Ingredient5" class="form-control" />
+                <span asp-validation-for="Ingredient5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient6" class="control-label"></label>
+                <input asp-for="Ingredient6" class="form-control" />
+                <span asp-validation-for="Ingredient6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient7" class="control-label"></label>
+                <input asp-for="Ingredient7" class="form-control" />
+                <span asp-validation-for="Ingredient7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient8" class="control-label"></label>
+                <input asp-for="Ingredient8" class="form-control" />
+                <span asp-validation-for="Ingredient8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredient9" class="control-label"></label>
+                <input asp-for="Ingredient9" class="form-control" />
+                <span asp-validation-for="Ingredient9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

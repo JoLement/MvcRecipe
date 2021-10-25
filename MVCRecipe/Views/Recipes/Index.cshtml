@@ -1,0 +1,113 @@
+﻿@model IEnumerable<MVCRecipe.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumMeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartSeason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndSeason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredient9)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.NumMeal)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartSeason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndSeason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredient9)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
